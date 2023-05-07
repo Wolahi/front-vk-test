@@ -14,6 +14,7 @@ import InputEmail from "../InputBlocksComponent/InputEmail";
 import InputPass from "../InputBlocksComponent/InputPass";
 import ButtonForgot from "../InputBlocksComponent/Button&Forgot";
 import SwitchLogReg from "../InputBlocksComponent/SwitchLogReg";
+import { useLoginUserQuery } from "../../../../../store/user/user.api";
 
 const authLoginUrl = "http://127.0.0.1:8000/auth/jwt/login";
 const curUser = "http://127.0.0.1:8000/users/me";
@@ -41,9 +42,7 @@ const SignInView = (): ReactElement => {
       .then((response) => console.log(response));
     console.log(cookies.user);
   }, [cookies.user]);
-  const onSubmit = (data: FormDataLogin): void => {
-    login(`username=${data.email}&password=${data.password}`);
-  };
+  const onSubmit = (dataLog: FormDataLogin): void => {};
   return (
     <div className={styles.root}>
       <div className={styles.imgBlock}>

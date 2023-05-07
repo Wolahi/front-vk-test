@@ -13,7 +13,6 @@ const ImgPasteModal = (): ReactElement => {
               id="file[]"
               type="file"
               name="file[]"
-              multiple
               onChange={(e: any): void => {
                 imgHook.onChange(e);
               }}

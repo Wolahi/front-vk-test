@@ -20,13 +20,13 @@
     height: 30%;
     background-color: #fff;
     .inputFileBlock {
-      display: inline-block;
+      display: flex;
       width: 90%;
       height: 70%;
       border: 1px dashed #a2a2a6;
-      border-radius: 20px;
-      padding-top: 10%;
-      padding-left: 25%;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 20px;
       background-color: #fff;
       font-size: 14px;
       border-radius: 8px;
@@ -56,7 +56,6 @@
         position: relative;
         display: inline-block;
         cursor: pointer;
-        vertical-align: middle;
         text-align: center;
         border-radius: 4px;
         background-color: #3665c5;

@@ -5,7 +5,6 @@ import useImg from "../../../hooks/User/useImg";
 import Sea from "../../../assets/auth/imgs/sea.png";
 
 import style from "../User.module.scss";
-import ImgPasteModal from "./modal/ImgPasteModal";
 
 const ProfileHeader = (): ReactElement => {
   const imgHook = useImg();
@@ -16,10 +15,8 @@ const ProfileHeader = (): ReactElement => {
     city: "Воронеж",
     edu: "ВГТУ",
   };
-  console.log(imgHook.img);
   return (
     <div className={style.profileHeader}>
-      <ImgPasteModal />
       <div className={style.bgImg}>
         <img src={user.bgImg} alt="" />
       </div>
