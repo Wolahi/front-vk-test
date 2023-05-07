@@ -1,0 +1,207 @@
+@import "../../../style/mixins";
+@import "../../../style/variables.scss";
+@media (max-width: 1000px) {
+  .root {
+    grid-template-columns: auto 1fr !important;
+  }
+  .imgBlock {
+    img {
+      display: none;
+    }
+  }
+}
+.root {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100vh;
+  background-color: #e5e5e5;
+
+  .imgBlock {
+    opacity: 0.5;
+    z-index: 0;
+    width: 100%;
+    overflow: hidden;
+    img {
+      max-width: 1000px;
+      height: auto;
+      overflow: auto;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: #3665c5;
+  }
+
+  a:hover {
+    color: #3057a7;
+  }
+  .imgBlock {
+    width: 100%;
+  }
+  .formBlock {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  }
+  .signForm {
+    display: grid;
+    height: 80%;
+    width: 60%;
+    grid-template-rows: 20% 20% 60%;
+  }
+  .changeFormText {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: $font-glory;
+    color: #bdbdbd;
+  }
+  .linkForgot {
+    color: #3665c5;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: $font-glory;
+  }
+  .head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: $font-glory;
+    color: #000000;
+    .logIncAcc {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+
+  form {
+    margin: 0 auto;
+    width: 100%;
+    .sign {
+      display: flex;
+      flex-direction: column;
+      height: 90%;
+      .userInfo {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 45% 45%;
+        grid-column-gap: 10%;
+        .wrapper {
+          input {
+            padding-left: 12px;
+          }
+        }
+      }
+      .inputBlock {
+        width: 100%;
+        height: 84px;
+        .wrapper {
+          position: relative;
+        }
+        .icon {
+          height: 1.5rem;
+          width: 1.5rem;
+          padding: 4px;
+          position: absolute;
+          box-sizing: border-box;
+          top: 21.5px;
+          left: 12px;
+          transform: translateY(-50%);
+        }
+        input {
+          width: 100%;
+          height: 43px;
+          background-position: 50%;
+          border: 1px solid #a2a2a6;
+          border-radius: 6px;
+          padding-left: 38px;
+          font-family: $font-glory;
+        }
+
+        .eye {
+          position: absolute;
+          background-color: inherit;
+          box-sizing: border-box;
+          border: none;
+          top: 25%;
+          transform: translate(50%);
+          right: 20px;
+
+          &:hover {
+            cursor: pointer;
+            opacity: 0.9;
+          }
+        }
+      }
+
+      .labelTop {
+        font-size: 14px;
+        font-weight: 600;
+        font-family: $font-glory;
+        color: #000000;
+        margin-bottom: 6px;
+      }
+    }
+
+    .blockLoginFogot {
+      display: flex;
+      justify-content: space-between;
+
+      .remeber {
+        display: flex;
+        font-size: 12px;
+        line-height: 24px;
+        font-weight: 600;
+        font-family: $font-glory;
+        color: #a2a2a6;
+
+        input {
+          border-radius: 5px;
+          border: 1px solid #a2a2a6;
+          margin-right: 8px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .buttonEnable {
+      width: 100%;
+      height: 44px;
+      font-size: 14px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-family: $font-glory;
+      margin-top: 40px;
+      border: none;
+      background-color: #3665c5;
+      color: #fff;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.9;
+        transform: scale(1.1);
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+}
+
+.error {
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 600;
+  font-family: $font-glory;
+  margin-bottom: 8px;
+  color: #cf4242;
+}

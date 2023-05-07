@@ -1,21 +1,43 @@
 {
-  "name": "social-network",
+  "name": "social-net",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "6": "^0.0.1",
+    "@hookform/devtools": "^4.3.1",
+    "@hookform/resolvers": "^3.0.1",
+    "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "axios": "^1.4.0",
+    "clsx": "^1.2.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "ol": "^7.3.0",
     "react": "^18.2.0",
+    "react-cookie": "^4.1.1",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "react-icons": "^4.8.0",
+    "react-redux": "^8.0.5",
+    "react-router": "^6.10.0",
+    "react-router-dom": "^6.10.0",
+    "react-scripts": "^5.0.1",
+    "redux": "^4.2.1",
+    "rlayers": "^1.4.9",
+    "sass": "^1.58.3",
+    "sass-loader": "^13.2.2",
+    "web-vitals": "^2.1.4",
+    "yup": "^1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettier": "prettier  --write src/**/*.{js,jsx,ts,tsx}",
+    "tsc:w": "tsc -w",
+    "dev": "react-scripts dev"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +56,34 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.34",
+    "@types/react-dom": "^18.0.11",
+    "@types/react-redux": "^7.1.25",
+    "babel-eslint": "^10.1.0",
+    "css-loader": "^6.7.3",
+    "css-modules-typescript-loader": "^4.0.1",
+    "eslint": "^8.38.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-functional": "^5.0.7",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "2.8.4",
+    "react-hook-form": "^7.43.9",
+    "react-router-dom": "^6.10.0",
+    "style-loader": "^3.3.2",
+    "stylelint": "^15.4.0",
+    "stylelint-config-standard": "^32.0.0",
+    "stylelint-config-standard-scss": "^7.0.1",
+    "ts-loader": "^9.4.2",
+    "tsutils": "^3.21.0",
+    "tsx": "^3.12.6",
+    "typescript": "^4.6.2-insiders.20220225",
+    "webpack": "^5.79.0"
   }
 }
