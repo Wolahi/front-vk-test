@@ -1,13 +1,18 @@
 @import "../../style/variables.scss";
-.root {
-  background-color: #fcfcfc;
-  height: 100vh;
+.userPage {
+  background-color: #eaeaea;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
   justify-content: center;
 }
+.root{
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
 
 .profileHeader {
+  min-width: 800px;
   display: grid;
   grid-template-rows: [item-1-start] 200px [item-2-start] 50px [item-1-end] 60px [item-2-end];
   margin-top: 50px;
