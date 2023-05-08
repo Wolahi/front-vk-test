@@ -1,10 +1,26 @@
-import { ReactElement } from "react";
-import SignInView from "./ui/core/Auth/components/SignInComponets/SignInView";
-// import SignUpView from "./ui/Auth/components/SignUpComponents/SignUpView";
-// import UserPage from "./ui/core/User/UserView";
+import { ReactElement, useEffect } from "react";
+import { useCookies } from "react-cookie";
+import { Outlet, useNavigate } from "react-router-dom";
+import useLogin from "./ui/hooks/HooksAuth/useLogin";
 
 const App = (): ReactElement => {
-  return <SignInView />;
+  const [cookie] = useCookies(["user"]);
+  const navigate = useNavigate();
+  const logHook = useLogin();
+
+  useEffect(() => {
+    if (cookie.user !== undefined) {
+      // eslint-disable-next-line
+      logHook.getCurUser();
+      navigate("/userpage");
+      console.log("yes");
+    } else {
+      navigate("/login");
+    }
+    // eslint-disable-next-line
+  }, []);
+
+  return <Outlet />;
 };
 
 export default App;

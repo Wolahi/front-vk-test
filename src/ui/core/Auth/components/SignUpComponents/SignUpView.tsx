@@ -13,14 +13,17 @@ import InputPass from "../InputBlocksComponent/InputPass";
 import SwitchRegLog from "../InputBlocksComponent/SwitchRegLog";
 import InputUserName from "../InputBlocksComponent/InputUserName";
 import InputNumber from "../InputBlocksComponent/InputNumber";
+import useReg from "../../../../hooks/HooksAuth/useReg";
 
 const SignUpView = (): ReactElement => {
+  const regHook = useReg();
   const schemas = useSchemasValid();
   type FormDataReg = yup.InferType<typeof schemas.schemaRegister>;
   const methods = useForm<FormDataReg>({
     resolver: yupResolver(schemas.schemaRegister),
   });
   const onSubmit = (data: FormDataReg): void => {
+    regHook.reg(data);
     console.log(data);
   };
   return (

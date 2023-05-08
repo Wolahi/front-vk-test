@@ -13,7 +13,12 @@ const InputNumber = (): ReactElement => {
       <div className={styles.labelTop}>Номер телефона</div>
       <div className={styles.wrapper}>
         <FiSmartphone className={styles.icon} />
-        <input id="number" type="text" {...register("number")} placeholder="Ваш номер телефона" />
+        <input
+          id="number"
+          type="text"
+          {...register("num_telephone")}
+          placeholder="Ваш номер телефона"
+        />
         <div className={styles.error}>{errors.number && (errors.number.message as string)}</div>
       </div>
     </div>

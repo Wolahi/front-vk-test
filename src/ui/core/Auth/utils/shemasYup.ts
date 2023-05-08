@@ -18,13 +18,13 @@ const useSchemasValid = (): any => {
   }).required();
 
   const schemaRegister = Yup.object({
-    userName: Yup.string()
+    username: Yup.string()
       .when({
         is: (val: any) => val.length > 0,
         then: () => Yup.string().min(2, "Минимальная длинна 2 символа"),
       })
       .required("Поле не может быть пустым"),
-    surName: Yup.string()
+    surname: Yup.string()
       .when({
         is: (val: any) => val.length > 0,
         then: () => Yup.string().min(2, "Минимальная длинна 2 символа"),
@@ -36,7 +36,7 @@ const useSchemasValid = (): any => {
         then: () => Yup.string().email("Почта должна быть валидной"),
       })
       .required("Поле не может быть пустым"),
-    number: Yup.string()
+    num_telephone: Yup.string()
       .when({
         is: (val: any) => val.length > 0,
         then: () => Yup.string().matches(/^[0-9]+$/, "Телефон должен быть настоящий"),
