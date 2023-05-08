@@ -19,7 +19,6 @@ const ProfileHeader = (): ReactElement => {
   console.log(imgHook.img);
   return (
     <div className={style.profileHeader}>
-      <ImgPasteModal />
       <div className={style.bgImg}>
         <img src={user.bgImg} alt="" />
       </div>
