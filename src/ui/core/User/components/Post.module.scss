@@ -1,0 +1,43 @@
+@import "../../../style/variables.scss";
+.post{
+    margin: 20px 0px;
+    background-color: white;
+    border-radius: 15px;
+    max-width: 800px;
+    font-family: $font-glory;
+    .postHeader{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 10px;
+        padding-top: 5px;
+        padding-left: 5px;
+        .userImg{
+            img{
+                width: 40px;
+                border-radius: 50%;
+            }
+        }
+    }
+    .postImg{
+        margin: 0 10px;
+        img{
+            max-height: 400px;
+            width: 100%;
+        }
+    }
+    .postText{
+        margin: 10px;
+    }
+    .postReactions{
+        margin: 10px;
+        button{
+            border: 0;
+            background: none;
+            cursor: pointer;
+            svg:hover{
+                background-color: grey;
+            }
+        }
+    }
+}

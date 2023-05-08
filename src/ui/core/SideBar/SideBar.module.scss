@@ -7,38 +7,45 @@ a{
         color: #3665c5;
     }
 }
-.sideBar{
-    background-color: white;
+.wrapper{
+    height: 100%;
     width: 287px;
-    min-height: 100vh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    .userImg{
-        overflow: hidden;
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        margin: 8px;
-        img {
-            max-width: 70px;
+    .sideBar{
+        background-color: white;
+        border-bottom-right-radius: 3%;
+        border-bottom-left-radius: 3%;
+        width: 287px;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        position: fixed;
+        .userImg{
+            overflow: hidden;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin: 8px;
+            img {
+                max-width: 70px;
+            }
         }
-    }
-    .navBar{
-        font-family: $font-inter;
-        font-size: 16px;
-        margin-left: 20px;
-        margin-top: 20px;
-        nav{
-            display: grid;
-            gap: 20px;
+        .navBar{
+            font-family: $font-inter;
+            font-size: 16px;
+            margin-left: 20px;
+            margin-top: 20px;
+            nav{    
+                display: grid;
+                gap: 20px;
+            }
         }
-    }
-    .logOut{
-        display: flex;
-        justify-content: flex-end;
-        margin-right: 30px;
-        font-family: $font-inter;
-        font-size: 18px;
-        margin-bottom: 40px;
+        .logOut{
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 30px;
+            font-family: $font-inter;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
     }
 }
