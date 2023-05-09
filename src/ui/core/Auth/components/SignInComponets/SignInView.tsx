@@ -13,17 +13,19 @@ import InputPass from "../InputBlocksComponent/InputPass";
 import ButtonForgot from "../InputBlocksComponent/Button&Forgot";
 import SwitchLogReg from "../InputBlocksComponent/SwitchLogReg";
 import useLogin from "../../../../hooks/HooksAuth/useLogin";
+import { useNavigate } from "react-router";
 
 const SignInView = (): ReactElement => {
   const logniHook = useLogin();
   const schemas = useSchemasValid();
+  const navigate = useNavigate();
   type FormDataLogin = yup.InferType<typeof schemas.schemaLogin>;
   const methods = useForm<FormDataLogin>({
     resolver: yupResolver(schemas.schemaLogin),
   });
   const onSubmit = (dataLog: FormDataLogin): void => {
-    logniHook.login(`username=${dataLog.email}&password=${dataLog.password}`).then(() => {
-      logniHook.getCurUser();
+    logniHook.login(`username=${dataLog.email}&password=${dataLog.password}`).then((res: any) => {
+      navigate("/userpage");
     });
   };
   return (

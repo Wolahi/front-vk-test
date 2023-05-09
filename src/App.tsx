@@ -2,7 +2,6 @@ import { ReactElement, useEffect } from "react";
 import { useCookies } from "react-cookie";
 import { Outlet, useNavigate } from "react-router-dom";
 import useLogin from "./ui/hooks/HooksAuth/useLogin";
-import UserPage from "./ui/core/User/UserView";
 
 const App = (): ReactElement => {
   const [cookie] = useCookies(["user"]);
@@ -12,7 +11,7 @@ const App = (): ReactElement => {
   useEffect(() => {
     if (cookie.user !== undefined) {
       // eslint-disable-next-line
-      logHook.getCurUser();
+      logHook.getCurUser(cookie.user);
       navigate("/userpage");
       console.log("yes");
     } else {
@@ -21,7 +20,7 @@ const App = (): ReactElement => {
     // eslint-disable-next-line
   }, []);
 
-  return <UserPage />;
+  return <Outlet />;
 };
 
 export default App;

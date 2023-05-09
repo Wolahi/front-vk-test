@@ -1,22 +1,22 @@
 import { ReactElement, useState } from "react";
+import { FiHeart } from "react-icons/fi";
+import { FcLike } from "react-icons/fc";
 import style from "./Post.module.scss";
-import useImg from "../../../hooks/User/useImg";
-import { NonLike } from "./NonLike";
-import { Like } from "./Like";
+import Sea from "../../../assets/auth/imgs/sea.png";
+import defAvatar from "../../../assets/userProfile/imgs/user_deafult.png";
 
 const Post = (): ReactElement => {
-  const imgHook = useImg();
   const [like, setLike] = useState(false);
   return (
     <div className={style.post}>
       <div className={style.postHeader}>
         <div className={style.userImg}>
-          <img src={imgHook.img} alt="" />
+          <img src={defAvatar} alt="" />
         </div>
         <div className={style.userName}>PostUserName</div>
       </div>
       <div className={style.postImg}>
-        <img src={imgHook.img} alt="" />
+        <img src={Sea} alt="" />
       </div>
       <div className={style.postText}>
         <span>
@@ -30,7 +30,9 @@ const Post = (): ReactElement => {
         </span>
       </div>
       <div className={style.postReactions}>
-        <button onClick={(): void => setLike(!like)}>{like ? <Like /> : <NonLike />}</button>
+        <button type="button" onClick={(): void => setLike(!like)}>
+          {like ? <FiHeart size={25} /> : <FcLike size={25} />}
+        </button>
       </div>
     </div>
   );

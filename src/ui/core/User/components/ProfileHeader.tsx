@@ -1,22 +1,27 @@
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 import { BsGeoAlt } from "react-icons/bs";
 import { FaUniversity } from "react-icons/fa";
 import Sea from "../../../assets/auth/imgs/sea.png";
-import useImg from "../../../hooks/User/useImg";
 import style from "../User.module.scss";
 import useTypedSelector from "../../../../shared/hooks/useTypedSelector";
+import ImgPasteModal from "./modal/ImgPasteModal";
 
 const ProfileHeader = (): ReactElement => {
-  const imgHook = useImg();
+  const [show, setShow] = useState(false);
   const { curUser } = useTypedSelector((state) => state);
   return (
     <div className={style.profileHeader}>
+      <ImgPasteModal show={show} setShow={setShow} />
       <div className={style.bgImg}>
         <img src={Sea} alt="" />
       </div>
       <div className={style.infoUser}>
-        <div className={style.avatar}>
-          <img src={imgHook.img} alt="" />
+        <div
+          className={style.avatar}
+          onClick={(): void => {
+            setShow(true);
+          }}>
+          <img src={curUser.avatar} alt="" />
         </div>
         <div className={style.data}>
           <div className={style.userName}>

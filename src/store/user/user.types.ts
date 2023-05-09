@@ -3,8 +3,8 @@ export interface UserRead {
   email: string;
   username: string;
   surname: string;
-  avatar: string;
-  bgImg: string;
+  avatar: any;
+  bgImg: any;
   edu: string;
   num_telephone: string;
   info: string;

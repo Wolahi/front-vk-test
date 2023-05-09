@@ -29,5 +29,7 @@ export const curUserSlice = createSlice({
   },
 });
 
-export const curUserReducer = curUserSlice.reducer;
-export const curUserActions = curUserSlice.actions;
+const curUserReducer = curUserSlice.reducer;
+const curUserActions = curUserSlice.actions;
+
+export { curUserActions, curUserReducer };
