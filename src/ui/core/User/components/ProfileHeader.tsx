@@ -46,7 +46,7 @@ const ProfileHeader = (): ReactElement => {
         <button
           type="button"
           className={style.buttCh}
-          onClick={() => {
+          onClick={(): any => {
             setShowInfo(true);
           }}>
           Редактировать

@@ -6,7 +6,7 @@ const SwitchRegLog = (): ReactElement => {
   return (
     <div className={styles.changeFormText}>
       <span>
-        У вас есть аккаунт?
+        У вас есть аккаунт?{" "}
         <Link to="/login" className={styles.linkForgot}>
           Войти
         </Link>

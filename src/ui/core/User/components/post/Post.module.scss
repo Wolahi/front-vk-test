@@ -1,4 +1,4 @@
-@import "../../../style/variables.scss";
+@import "../../../../style/variables.scss";
 .post {
   margin: 20px 0px;
   background-color: white;
@@ -35,9 +35,6 @@
       border: 0;
       background: none;
       cursor: pointer;
-      svg:hover {
-        background-color: grey;
-      }
     }
   }
 }

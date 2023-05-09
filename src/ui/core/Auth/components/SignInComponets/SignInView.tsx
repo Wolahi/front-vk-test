@@ -1,4 +1,5 @@
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
+import { useNavigate } from "react-router";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { FormProvider, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -13,7 +14,6 @@ import InputPass from "../InputBlocksComponent/InputPass";
 import ButtonForgot from "../InputBlocksComponent/Button&Forgot";
 import SwitchLogReg from "../InputBlocksComponent/SwitchLogReg";
 import useLogin from "../../../../hooks/HooksAuth/useLogin";
-import { useNavigate } from "react-router";
 
 const SignInView = (): ReactElement => {
   const logniHook = useLogin();
@@ -24,7 +24,7 @@ const SignInView = (): ReactElement => {
     resolver: yupResolver(schemas.schemaLogin),
   });
   const onSubmit = (dataLog: FormDataLogin): void => {
-    logniHook.login(`username=${dataLog.email}&password=${dataLog.password}`).then((res: any) => {
+    logniHook.login(`username=${dataLog.email}&password=${dataLog.password}`).then(() => {
       navigate("/userpage");
     });
   };

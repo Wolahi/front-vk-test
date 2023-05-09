@@ -10,7 +10,7 @@ const ImgPasteModal = (prop: any): ReactElement => {
       {show && (
         <div className={styles.root}>
           <div className={styles.block}>
-            <div className={styles.changeText}>Сменить аватарку</div>
+            <div className={styles.changeText}>Сменить фото профиля</div>
             <div className={styles.inputFileBlock}>
               <label htmlFor="file[]" className={styles.input_file}>
                 <input

@@ -1,9 +1,9 @@
 import { ReactElement, useState } from "react";
-import { FiHeart } from "react-icons/fi";
-import { FcLike } from "react-icons/fc";
 import style from "./Post.module.scss";
-import Sea from "../../../assets/auth/imgs/sea.png";
-import defAvatar from "../../../assets/userProfile/imgs/user_deafult.png";
+import Sea from "../../../../assets/auth/imgs/sea.png";
+import defAvatar from "../../../../assets/userProfile/imgs/user_deafult.png";
+import Like from "./like";
+import NonLike from "./nonLike";
 
 const Post = (): ReactElement => {
   const [like, setLike] = useState(false);
@@ -31,7 +31,7 @@ const Post = (): ReactElement => {
       </div>
       <div className={style.postReactions}>
         <button type="button" onClick={(): void => setLike(!like)}>
-          {like ? <FiHeart size={25} /> : <FcLike size={25} />}
+          {like ? <Like /> : <NonLike />}
         </button>
       </div>
     </div>

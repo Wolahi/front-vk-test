@@ -56,8 +56,8 @@
   .changeFormText {
     display: flex;
     justify-content: flex-end;
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 500;
     font-family: $font-glory;
     color: #bdbdbd;
   }
@@ -96,6 +96,7 @@
         .wrapper {
           input {
             padding-left: 12px;
+            
           }
         }
       }
@@ -104,6 +105,9 @@
         height: 84px;
         .wrapper {
           position: relative;
+          input{
+            outline:none;
+          }
         }
         .icon {
           height: 1.5rem;
