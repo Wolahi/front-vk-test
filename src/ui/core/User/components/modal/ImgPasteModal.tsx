@@ -9,7 +9,7 @@ const ImgPasteModal = (prop: any): ReactElement => {
     <div>
       {show && (
         <div className={styles.root}>
-          <div className={styles.block}>
+          <div className={styles.FileBlock}>
             <div className={styles.changeText}>Сменить фото профиля</div>
             <div className={styles.inputFileBlock}>
               <label htmlFor="file[]" className={styles.input_file}>
@@ -25,7 +25,10 @@ const ImgPasteModal = (prop: any): ReactElement => {
                 <span>Выберите файл</span>
               </label>
             </div>
-            <button type="button" onClick={(): void => setShow(false)}>
+            <button
+              className={styles.closeBtnForFileBlock}
+              type="button"
+              onClick={(): void => setShow(false)}>
               Закрыть
             </button>
           </div>
