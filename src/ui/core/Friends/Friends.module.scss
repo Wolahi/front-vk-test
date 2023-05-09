@@ -1,0 +1,66 @@
+@import "../../style/variables.scss";
+.root{
+    background-color: #eaeaea;
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    .Friends{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .FriendCard{
+            background-color: white;
+            height: 100px;
+            width: 500px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            position: relative;
+            border-top: 1px solid rgb(206, 205, 205);
+            border-bottom: 1px solid rgb(206, 205, 205);
+            .header{
+                margin-left: 10px;
+                font-family: $font-inter;
+                margin-top: 12px;
+                .userName{
+                    font-size: 16px;
+                }
+                .userLink{
+                    font-size: 14px;
+                    margin-top: 5px;
+                }
+                .delete{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    margin: 10px;
+                    button{
+                        background: none;
+                        border: none;
+                        cursor: pointer;
+                        svg:hover{
+                            fill: red;
+                            transition: all .2s;
+                        }
+                    }
+                }
+            }
+            .userImgWrap{
+                display: flex;
+                align-items: center;
+                margin-left: 5px;
+                .userImg{
+                    display: flex;
+                    align-items: center;
+                    overflow: hidden;
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    img{
+                        max-width: 80px;
+                        overflow: auto;
+                    }
+                }
+            }
+        }
+    }
+}

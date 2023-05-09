@@ -7,3 +7,7 @@
 body {
     background-color: #FFF;
 }
+.rootWrap{
+    display: grid;
+    grid-template-columns: auto 1fr;
+}

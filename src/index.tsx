@@ -1,7 +1,6 @@
 import ReactDOM from "react-dom";
 import { CookiesProvider } from "react-cookie";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import "./ui/style/Index.scss";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
 import SignInView from "./ui/core/Auth/components/SignInComponets/SignInView";
