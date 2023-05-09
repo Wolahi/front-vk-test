@@ -21,7 +21,7 @@ const useLogin = (): any => {
 
   const login = async (obj: any): Promise<void> => {
     await axios.post(authLoginUrl, obj, { withCredentials: true }).then((response) => {
-      setCookie("user", JSON.parse(response.request.response).access_token);
+      setCookie("user", JSON.parse(response.request.response).access_token, { maxAge: 3600 });
       getCurUser(JSON.parse(response.request.response).access_token);
     });
   };

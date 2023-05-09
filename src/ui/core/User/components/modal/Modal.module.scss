@@ -19,6 +19,13 @@
     width: 30%;
     height: 30%;
     background-color: #fff;
+
+    .changeText {
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 600;
+      font-family: $font-glory;
+    }
     .inputFileBlock {
       display: flex;
       width: 90%;
@@ -32,13 +39,6 @@
       border-radius: 8px;
       font-weight: 600;
       font-family: $font-glory;
-
-      .inputFileList {
-        margin-top: 20px;
-        font-size: 14px;
-        margin-left: 20px;
-        font-family: $font-glory;
-      }
     }
     .input_file {
       position: relative;
