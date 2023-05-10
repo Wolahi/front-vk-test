@@ -1,9 +1,10 @@
 import { ReactElement, useEffect } from "react";
 import { useCookies } from "react-cookie";
-import { Outlet, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import useLogin from "./ui/hooks/HooksAuth/useLogin";
 import useFriendsList from "./ui/hooks/User/useFrendsList";
 import { UserRead } from "./store/user/user.types";
+import UserPage from "./ui/core/User/UserView";
 
 const App = (): ReactElement => {
   const [cookie] = useCookies(["user"]);
@@ -22,7 +23,7 @@ const App = (): ReactElement => {
     // eslint-disable-next-line
   }, []);
 
-  return <Outlet />;
+  return <UserPage />;
 };
 
 export default App;

@@ -6,13 +6,17 @@ const InputForSearchFriends = (): ReactElement => {
   return (
     <div className={style.SearchInput}>
       <div className={style.header}>
-        <label htmlFor="search">
-          <AiOutlineSearch size={18} />
-          <input type="search" id="search" name="search" placeholder="Поиск друзей" />
-          <div className={style.search}>
-            <button type="button">Поиск</button>
-          </div>
-        </label>
+        <form noValidate>
+          <label htmlFor="text">
+            <div className={style.wrapInput}>
+              <AiOutlineSearch size={20} />
+              <input type="text" id="text" name="text" placeholder="Поиск друзей" />
+            </div>
+            <div className={style.search}>
+              <button type="button">Поиск</button>
+            </div>
+          </label>
+        </form>
       </div>
     </div>
   );

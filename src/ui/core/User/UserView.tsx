@@ -21,8 +21,8 @@ const UserPage = (): ReactElement => {
           </div>
           <SideBarFriends />
         </div>
-        <AlertComp active={Alert.showAlert} setActive={Alert.setShowAlert} text={Alert.textAlert} />
       </div>
+      <AlertComp active={Alert.showAlert} setActive={Alert.setShowAlert} text={Alert.textAlert} />
     </div>
   );
 };

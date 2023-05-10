@@ -5,7 +5,6 @@ import { useParams } from "react-router";
 import axios from "axios";
 import { useCookies } from "react-cookie";
 import style from "../User.module.scss";
-import useFriendsActions from "../../../hooks/User/useFriendsActions";
 import useFriendsList from "../../../hooks/User/useFrendsList";
 import useTypedSelector from "../../../../shared/hooks/useTypedSelector";
 
@@ -72,14 +71,14 @@ const FriendProfile = (): ReactElement => {
           <button
             type="button"
             className={style.buttCh}
-            onClick={() => friendsList.deleteFromList(user)}>
+            onClick={(): any => friendsList.deleteFromList(user)}>
             Удалить из друзей
           </button>
         ) : (
           <button
             type="button"
             className={style.buttCh}
-            onClick={() => friendsList.addToListDB(user)}>
+            onClick={(): any => friendsList.addToListDB(user)}>
             Добавить в друзья
           </button>
         )}
