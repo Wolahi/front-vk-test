@@ -8,12 +8,16 @@ export const frendsSlice = createSlice({
   initialState,
   reducers: {
     initFrendsList: (state, actions: PayloadAction<UserRead[]>) => {
+      const date = actions.payload.filter((u) => u !== null);
       // eslint-disable-next-line
-      state = actions.payload;
+      state = date;
       return state;
     },
-    removeFromList: (state, actions: PayloadAction<number>) => {
-      state.filter((u) => u.id !== actions.payload);
+    removeFromList: (state, actions: PayloadAction<UserRead>) => {
+      return state.filter((u) => u.id !== actions.payload.id);
+    },
+    addToList: (state, action: PayloadAction<UserRead>) => {
+      state.push(action.payload);
       return state;
     },
   },

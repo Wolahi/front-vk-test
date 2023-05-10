@@ -9,6 +9,7 @@ import App from "./App";
 import UserPage from "./ui/core/User/UserView";
 import SignUpView from "./ui/core/Auth/components/SignUpComponents/SignUpView";
 import Friends from "./ui/core/Friends/Friends";
+import FriendUserPageView from "./ui/core/User/FriendUserPageView";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/friends",
         element: <Friends />,
+      },
+      {
+        path: "/friend/:id",
+        element: <FriendUserPageView />,
       },
     ],
   },

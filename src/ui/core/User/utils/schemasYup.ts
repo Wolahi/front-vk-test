@@ -36,7 +36,7 @@ const useSchemasValid = (): any => {
     }),
     info: Yup.string().when({
       is: (val: any) => val.length > 0,
-      then: () => Yup.string().max(25, "Максимальная длина 30 символов"),
+      then: () => Yup.string().max(50, "Максимальная длина 50 символов"),
     }),
   });
 

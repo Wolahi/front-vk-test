@@ -1,16 +1,19 @@
 import { ReactElement } from "react";
 import { AiOutlineDelete } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import style from "../Friends.module.scss";
+import useFriendsList from "../../../hooks/User/useFrendsList";
 
 const CardFriend = (props: any): ReactElement => {
   const { user } = props;
+  const friendList = useFriendsList();
   return (
     <div key={user.id} className={style.FriendCard}>
       <div className={style.userImgWrap}>
         <div className={style.userImg}>
-          <a href="/#">
+          <Link to={`/friend/${user.id}`}>
             <img src={user.avatar} alt="" />
-          </a>
+          </Link>
         </div>
       </div>
       <div className={style.header}>
@@ -20,10 +23,10 @@ const CardFriend = (props: any): ReactElement => {
           </span>
         </div>
         <div className={style.userLink}>
-          <a href="/#">Перейти на страницу пользователя</a>
+          <Link to={`/friend/${user.id}`}>Перейти на страницу пользователя</Link>
         </div>
         <div className={style.delete}>
-          <button type="button">
+          <button type="button" onClick={(): void => friendList.deleteFromList(user)}>
             <AiOutlineDelete size={18} />
           </button>
         </div>

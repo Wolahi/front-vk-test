@@ -1,30 +1,25 @@
 import { ReactElement } from "react";
 import style from "./User.module.scss";
-import ProfileHeader from "./components/ProfileHeader";
 import Post from "./components/post/Post";
 import SideBar from "../SideBar/SideBar";
+import FriendProfile from "./components/FreindProfile";
 import SideBarFriends from "./components/friendsBAr/SideBarFriends";
-import AlertComp from "./Alert/alert";
-import useData from "./Alert/data";
 
-const UserPage = (): ReactElement => {
-  const Alert = useData();
-
+const FriendUserPageView = (): ReactElement => {
   return (
     <div className={style.root}>
       <SideBar />
       <div className={style.userPage}>
-        <ProfileHeader />
+        <FriendProfile />
         <div className={style.mainWrap}>
           <div>
             <Post />
           </div>
           <SideBarFriends />
         </div>
-        <AlertComp active={Alert.showAlert} setActive={Alert.setShowAlert} text={Alert.textAlert} />
       </div>
     </div>
   );
 };
 
-export default UserPage;
+export default FriendUserPageView;

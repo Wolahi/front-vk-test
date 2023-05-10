@@ -3,11 +3,19 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   justify-content: center;
+  min-width: 800px;
+  .mainWrap {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    margin-top: 20px;
+  }
 }
 .root {
   background-color: #eaeaea;
   display: grid;
   min-height: 100vh;
+  grid-template-columns: auto 1fr;
 }
 
 .profileHeader {

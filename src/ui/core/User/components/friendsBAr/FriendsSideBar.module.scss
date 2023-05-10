@@ -1,0 +1,49 @@
+@import "../../../../style//variables.scss";
+.sideBar {
+  background-color: white;
+  border-radius: 15px;
+  max-height: 500px;
+  font-family: $font-glory;
+  .header {
+    margin-top: 12px;
+    text-align: center;
+  }
+  .allFriends {
+    text-align: center;
+    margin-top: 5px;
+  }
+  .friends {
+    margin-top: 20px;
+    border-bottom: 1px solid grey;
+    .friendsCard {
+      border-top: 1px solid grey;
+      display: grid;
+      height: 70px;
+      grid-template-columns: auto 1fr;
+      position: relative;
+      .friendsCardInfo {
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto auto;
+        gap: 12px;
+        .friendsCardImg {
+          width: 60px;
+          height: 60px;
+          overflow: hidden;
+          margin-left: 5px;
+          border-radius: 50%;
+        }
+        img {
+          width: 60px;
+          overflow: auto;
+        }
+        .setting {
+          position: absolute;
+          top: 0;
+          right: 0;
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+}
