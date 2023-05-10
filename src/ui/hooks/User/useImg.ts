@@ -19,21 +19,33 @@ const useImg = (): any => {
     });
   };
 
-  const onChange = async (e: any): Promise<void> => {
+  const onChangeAvatar = async (e: any): Promise<void> => {
     const headers = {
       Authorization: `Bearer ${cookies.user}`,
     };
     const file = e.target.files[0];
     const base64 = await converToBase64(file);
-    console.log(base64);
     const data: UserRead = {
       ...curUser,
       avatar: base64,
     };
-    axios.patch(curUserUrl, data, { headers }).then((res) => console.log(res));
+    axios.patch(curUserUrl, data, { headers });
   };
 
-  return { onChange, converToBase64 };
+  const onChangeBg = async (e: any): Promise<void> => {
+    const headers = {
+      Authorization: `Bearer ${cookies.user}`,
+    };
+    const file = e.target.files[0];
+    const base64 = await converToBase64(file);
+    const data: UserRead = {
+      ...curUser,
+      bg_img: base64,
+    };
+    axios.patch(curUserUrl, data, { headers });
+  };
+
+  return { onChangeBg, onChangeAvatar, converToBase64 };
 };
 
 export default useImg;

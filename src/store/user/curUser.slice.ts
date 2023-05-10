@@ -7,7 +7,7 @@ const initialState: UserRead = {
   username: "",
   surname: "",
   avatar: "",
-  bgImg: "",
+  bg_img: "",
   edu: "",
   num_telephone: "",
   info: "",

@@ -8,11 +8,11 @@ const InputForSearchFriends = (): ReactElement => {
       <div className={style.header}>
         <label htmlFor="search">
           <AiOutlineSearch size={18} />
+          <input type="search" id="search" name="search" placeholder="Поиск друзей" />
+          <div className={style.search}>
+            <button type="button">Поиск</button>
+          </div>
         </label>
-        <input type="search" id="search" name="search" placeholder="Поиск друзей" />
-        <div className={style.search}>
-          <button type="button"></button>
-        </div>
       </div>
     </div>
   );

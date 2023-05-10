@@ -8,7 +8,6 @@
   background-color: #eaeaea;
   display: grid;
   min-height: 100vh;
-  grid-template-columns: auto 1fr;
 }
 
 .profileHeader {
@@ -27,6 +26,27 @@
     img {
       max-width: 800px;
       overflow: auto;
+    }
+  }
+  .changeBg {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    transform: translate(-15px, 15px);
+    background-color: inherit;
+    border: none;
+
+    .icons {
+      &:hover {
+        cursor: pointer;
+        color: #000;
+        transition: all 0.5s ease;
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
     }
   }
   .avatar {
@@ -94,7 +114,6 @@
   }
   .info {
     display: flex;
-    justify-content: flex-end;
     height: 70%;
   }
   .icons {

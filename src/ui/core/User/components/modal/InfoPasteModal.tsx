@@ -8,16 +8,20 @@ import useSchemasValid from "../../utils/schemasYup";
 import InputUserName from "./InputComp/InputUserName";
 import InputUserCityEdu from "./InputComp/InputUserCityEdu";
 import InputUserInfo from "./InputComp/inputUserInfo";
+import useUpdate from "../../../../hooks/User/useUpdate";
 
 const InfoPasteModal = (prop: any): ReactElement => {
   const { show, setShow } = prop;
   const schemas = useSchemasValid();
+  const update = useUpdate();
   type FormDataUpdate = yup.InferType<typeof schemas.schemaUpdate>;
   const methods = useForm<FormDataUpdate>({
     resolver: yupResolver(schemas.schemaUpdate),
   });
-  const onSubmit = (dataLog: FormDataUpdate): void => {
-    console.log(dataLog);
+  const onSubmit = (dataLog: FormDataUpdate): any => {
+    update.changeData(dataLog).then((): void => {
+      setShow(false);
+    });
   };
   return (
     <div>

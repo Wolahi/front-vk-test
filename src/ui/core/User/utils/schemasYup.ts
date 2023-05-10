@@ -34,7 +34,7 @@ const useSchemasValid = (): any => {
           .max(20, "Максимальная длина 20 символов")
           .matches(/[aA-zZ аА-яЯ 0-9]+/, "Is not in correct format"),
     }),
-    userStatus: Yup.string().when({
+    info: Yup.string().when({
       is: (val: any) => val.length > 0,
       then: () => Yup.string().max(25, "Максимальная длина 30 символов"),
     }),

@@ -10,7 +10,7 @@ const ImgPasteModal = (prop: any): ReactElement => {
       {show && (
         <div className={styles.root}>
           <div className={styles.FileBlock}>
-            <div className={styles.changeText}>Сменить фото профиля</div>
+            <div className={styles.changeText}>Изменить обложку профиля</div>
             <div className={styles.inputFileBlock}>
               <label htmlFor="file[]" className={styles.input_file}>
                 <input
@@ -18,7 +18,7 @@ const ImgPasteModal = (prop: any): ReactElement => {
                   type="file"
                   name="file[]"
                   onChange={(e: any): void => {
-                    imgHook.onChangeAvatar(e);
+                    imgHook.onChangeBg(e);
                     setShow(false);
                   }}
                 />

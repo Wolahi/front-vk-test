@@ -15,8 +15,8 @@ const InputUserInfo = (): ReactElement => {
       <div className={styles.wrapper}>
         <div className={styles.labelTop}>Статус</div>
         <textarea
-          id="userStatus"
-          {...register("userStatus")}
+          id="info"
+          {...register("info")}
           value={userStatus}
           onChange={(e): any => setUserStatus(e.target.value)}
           placeholder="Расскажите о себе"

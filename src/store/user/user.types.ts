@@ -4,7 +4,7 @@ export interface UserRead {
   username: string;
   surname: string;
   avatar: any;
-  bgImg: any;
+  bg_img: any;
   edu: string;
   num_telephone: string;
   info: string;

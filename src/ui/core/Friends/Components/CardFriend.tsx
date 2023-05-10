@@ -1,21 +1,23 @@
 import { ReactElement } from "react";
 import { AiOutlineDelete } from "react-icons/ai";
 import style from "../Friends.module.scss";
-import defAvatar from "../../../assets/userProfile/imgs/avatar.png";
 
-const CardFriend = (): ReactElement => {
+const CardFriend = (props: any): ReactElement => {
+  const { user } = props;
   return (
-    <div className={style.FriendCard}>
+    <div key={user.id} className={style.FriendCard}>
       <div className={style.userImgWrap}>
         <div className={style.userImg}>
           <a href="/#">
-            <img src={defAvatar} alt="" />
+            <img src={user.avatar} alt="" />
           </a>
         </div>
       </div>
       <div className={style.header}>
         <div className={style.userName}>
-          <span>Username</span>
+          <span>
+            {user.username} {user.surname}
+          </span>
         </div>
         <div className={style.userLink}>
           <a href="/#">Перейти на страницу пользователя</a>

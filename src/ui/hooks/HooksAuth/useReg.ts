@@ -32,13 +32,13 @@ const useReg = (): any => {
   const createDefUser = async (obj: UseReg): Promise<any> => {
     const avatarBlob = await createBlob(avatar);
     const bgImgBlob = await createBlob(bgImg);
-    console.log(avatarBlob);
     const avatarDef = await imgHook.converToBase64(avatarBlob);
     const bgDef = await imgHook.converToBase64(bgImgBlob);
+
     const data = {
       ...obj,
       avatar: avatarDef,
-      bgImg: bgDef,
+      bg_img: bgDef,
       edu: "Университет",
       city: "Москва",
       info: "Пользователь",

@@ -1,17 +1,26 @@
+import { Link } from "react-router-dom";
 import { ReactElement } from "react";
-import useImg from "../../hooks/User/useImg";
 import style from "./SideBar.module.scss";
+import useTypedSelector from "../../../shared/hooks/useTypedSelector";
 
 const SideBar = (): ReactElement => {
-  const imgHook = useImg();
+  const { curUser } = useTypedSelector((state) => state);
   return (
     <div className={style.wrapper}>
       <div className={style.sideBar}>
-        <div className={style.userImg}>
-          <img src={imgHook.img} alt="" />
-        </div>
+        <Link to="/userpage">
+          <div className={style.userImg}>
+            <img src={curUser.avatar} alt="" />
+          </div>
+        </Link>
+
         <div className={style.navBar}>
-          <nav>Ccskrf</nav>
+          <nav>
+            <Link to="/userpage">Моя страница</Link>
+          </nav>
+          <nav>
+            <Link to="/friends">Друзья</Link>
+          </nav>
         </div>
         <div className={style.logOut}>Sign Out</div>
       </div>

@@ -1,22 +1,31 @@
 import { ReactElement, useState } from "react";
-import { BsGeoAlt } from "react-icons/bs";
+import { BsGeoAlt, BsPen } from "react-icons/bs";
 import { FaUniversity } from "react-icons/fa";
-import Sea from "../../../assets/auth/imgs/sea.png";
 import style from "../User.module.scss";
 import useTypedSelector from "../../../../shared/hooks/useTypedSelector";
 import ImgPasteModal from "./modal/ImgPasteModal";
 import InfoPasteModal from "./modal/InfoPasteModal";
+import BgImgPasteModal from "./modal/BgImgPasteModal";
 
 const ProfileHeader = (): ReactElement => {
   const [show, setShow] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
+  const [showBg, setShowBg] = useState(false);
   const { curUser } = useTypedSelector((state) => state);
   return (
     <div className={style.profileHeader}>
       <ImgPasteModal show={show} setShow={setShow} />
+      <BgImgPasteModal show={showBg} setShow={setShowBg} />
       <InfoPasteModal show={showInfo} setShow={setShowInfo} />
       <div className={style.bgImg}>
-        <img src={Sea} alt="" />
+        <button
+          type="button"
+          name="testBut"
+          className={style.changeBg}
+          onClick={(): void => setShowBg(true)}>
+          <BsPen size={20} className={style.icons} />
+        </button>
+        <img src={curUser.bg_img} alt="" />
       </div>
       <div className={style.infoUser}>
         <button
