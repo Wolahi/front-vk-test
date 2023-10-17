@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "watch": true,
     "module": "commonjs",
     "sourceMap": false,
     "jsx": "react-jsx",

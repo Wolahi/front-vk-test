@@ -29,18 +29,7 @@ a {
         max-width: 70px;
       }
     }
-    .navBar {
-      display: grid;
-      height: 10%;
-      font-family: $font-glory;
-      font-size: 16px;
-      margin-left: 20px;
-      margin-top: 20px;
-      nav {
-        display: grid;
-        gap: 20px;
-      }
-    }
+
     .logOut {
       display: flex;
       justify-content: flex-end;
@@ -50,4 +39,9 @@ a {
       margin-bottom: 40px;
     }
   }
+}
+
+.text {
+  font-family: $font-glory;
+  font-size: 16px;
 }

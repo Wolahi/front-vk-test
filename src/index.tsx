@@ -42,7 +42,7 @@ const router = createBrowserRouter([
 ReactDOM.render(
   <Provider store={store}>
     <CookiesProvider>
-      <RouterProvider router={router} />
+      <RouterProvider router={router} fallbackElement={<div>...Loading</div>} />
     </CookiesProvider>
   </Provider>,
 
